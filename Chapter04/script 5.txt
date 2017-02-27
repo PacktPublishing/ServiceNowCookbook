@@ -1,0 +1,7 @@
+
+if(email.from.indexOf("noreply@externalsystem.com") >= 0 || email.from.indexOf("salessuport@packt.com ") >= 0
+{
+
+event.state="stop_processing";
+}
+

@@ -1,0 +1,13 @@
+var aus_finance = new GlideRecord("task");
+aus_finance.short_description = current.short_description;
+aus_finance.u_country = current.description;
+aus_finance.u_currency = current.u_preferred_payment_currency;
+aus_finance.u_bank = current.u_bank_name;
+aus_finance.u_author = current.u_author_name;
+aus_finance.sys_domain = current.sys_domain;
+var sysID = aus_finance.insert();
+current.rfc = sysID;
+var mySysID = current.update();
+gs.addInfoMessage("Task"+ " " + aus_finance.number + " "+ "created for Australia finance department" );
+action.setRedirectURL(aus_finance);
+action.setReturnURL(current);

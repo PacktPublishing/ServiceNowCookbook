@@ -1,0 +1,31 @@
+/* Texts in forms, Lists, Bookmarks, cards border_mouseover, Live-feed, Context Menu & Form right side Icons */
+$text-color: #3e1431
+/* Input boxes, Buttons tabs top color, pagination_vcr & Form Icons */
+$highlight-color: #6ab90d
+/*  Hover color for TR, Form Icons   */
+$accent-color: #6ab90d
+/*  Favorites, Bookmark Mouse over , Icon-Hover-Focus-Color*/ 
+$accent-color-dark: #6ab90d
+/* Border-colors */
+$lightest-color: #027864
+
+/* Navigation-border-bottom-colors */
+$color-light: #6ab90d
+/*  White background for Nav Items, Buttons, Pagination VCR & Form labels */
+$color-lightest: white
+/*  Edge_flyout_header section_title & anchor text */
+$color-dark: #000000
+/* Bookmark column & Navigator, Table Header, Form Header, Form right side Icons  */ 
+/*$color-lighter: #14846c*/
+
+#/* Additionally We can change the color for Banner */
+base.color: #6ab90d
+banner.description.color: #222222
+
+###
+# Legacy
+body.background.color: white;
+table.background.color: white;
+list.row.even.background.color: white; 
+list.row.odd.background.color: #027864;
+•	Device: doctype 

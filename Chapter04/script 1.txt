@@ -1,0 +1,80 @@
+//Insert Caller fields on incident form. 
+current.caller_id = gs.getUserID();
+
+// Insert comments fields on incident form from email body.
+current.comments = "received from: " + email.origemail + "\n\n" + email.body_text;
+
+// Insert short description field of incident form to email subject
+current.short_description = email.subject;
+// Set category field on incident form to “PACKT Document”
+current.category = "PACKT Document";
+
+// Set Subcategory field on incident form to “Author Query”
+current.subcategory = "Author Query";
+
+// set business services on incident form to Author Document. Business service is a reference field that’s why we are getting display value of field. 
+current.u_business_services.setDisplayValue('Author Document ');
+
+// Set assignment group on incident form  to document reviewer team. Sysid is being used to reference field 
+current.assignment_group = "9a94569ddb3fd280568eb58dbf96199b";
+
+//set state field on incident form to New
+current.incident_state = 1;
+
+// Set Impact field on incident to “3-Low”
+
+current.impact = 3;
+
+// Set contact type field on incident form to email. 
+
+current.contact_type = "email";
+
+// Set priority field on incident to “3-Moderate”
+
+current.priority = 3;
+
+// checking if body of email contains “serviceNOw”
+
+if(email.body_text.indexOf("ServiceNow") >= 0) 
+{
+// if condition is true then set author field on incident to “Ashish Srivastava”
+
+current.u_author = "Ashish Srivastava";
+}
+
+// checking if body of email contains “Informatica”
+
+else if(email.body_text.indexOf("Informatica") >= 0) 
+{
+// if condition is true then set author field on incident to “J Gorge”
+
+current.u_author = "J Gorge";
+}
+// if any condition do not match 
+else 
+{
+// set author field on incident to “Any Other”
+
+current.u_author= "Any Other";
+
+}
+// checking if email body contains “Bank of America” or "Bank of Scotland"
+
+if (email.body_text.indexOf("Bank Of America ") >= 0 || email.body_text.indexOf("Bank of Scotland") >= 0 ) 
+{
+// if condition is true then “sub sub category will be set is ”author’s payment will process in 7 working days”.
+
+current.u_sub_subcategory = "Payment Would Process In 7 Working Days";
+}
+else 
+{
+// if condition is false then “sub sub category will be set is ” Payment Would Process In 3 Working Days”.
+
+current.u_sub_subcategory = "Payment Would Process In 3 Working Days ";
+}
+// insert new record by using supplied values which have been set for current record. 
+
+current.insert();
+// stop inbound email action rule after process. 
+
+event.state="stop_processing";
