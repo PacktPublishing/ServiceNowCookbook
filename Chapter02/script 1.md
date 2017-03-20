@@ -1,3 +1,5 @@
+Servicenow has its own special formatting here this doesnt validate as css, scss, less or sass.
+```css
 /* Texts in forms, Lists, Bookmarks, cards border_mouseover, Live-feed, Context Menu & Form right side Icons */
 $text-color: #3e1431
 /* Input boxes, Buttons tabs top color, pagination_vcr & Form Icons */
@@ -18,14 +20,14 @@ $color-dark: #000000
 /* Bookmark column & Navigator, Table Header, Form Header, Form right side Icons  */ 
 /*$color-lighter: #14846c*/
 
-#/* Additionally We can change the color for Banner */
+/* Additionally We can change the color for Banner */
 base.color: #6ab90d
 banner.description.color: #222222
 
-###
-# Legacy
+/*###*/
+/*# Legacy*/
 body.background.color: white;
 table.background.color: white;
 list.row.even.background.color: white; 
 list.row.odd.background.color: #027864;
-•	Device: doctype 
+/*ï¿½	Device: doctype */

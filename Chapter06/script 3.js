@@ -1,7 +1,6 @@
-
 // Here we are creating enhancement task from service catalog. 
 
-On enhancement form we have created new fields where data is being pushed. 
+// On enhancement form we have created new fields where data is being pushed. 
 
 // set request item number to enhancement name
 
@@ -11,7 +10,7 @@ task.u_enhancement_name = current.number;
 // current.number = pull request item number
 // current.variable_pool.u_business_software.getDisplayValue() =  For an instance, if business software is a reference field then to retrieve it's text value you need to use getDisplayValue() function which is provided by service-now. 
 
-task.short_description = current.number + " "+ "For" + " "+ current.variable_pool.u_business_software.getDisplayValue()+" " +"Business Software";
+task.short_description = current.number + " " + "For" + " " + current.variable_pool.u_business_software.getDisplayValue() + " " + "Business Software";
 
 // set enhancement's task assignment group = request item assignment group
 
