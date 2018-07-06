@@ -8,6 +8,6 @@ aus_finance.sys_domain = current.sys_domain;
 var sysID = aus_finance.insert();
 current.rfc = sysID;
 var mySysID = current.update();
-gs.addInfoMessage("Task"+ " " + aus_finance.number + " "+ "created for Australia finance department" );
+gs.addInfoMessage("Task" + " " + aus_finance.number + " " + "created for Australia finance department");
 action.setRedirectURL(aus_finance);
 action.setReturnURL(current);

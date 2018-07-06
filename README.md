@@ -8,6 +8,7 @@ This book will help you build data-driven apps and it will also explore developm
 ## Instructions and Navigation
 All of the code is organized into folders. The commands and instructions will look like the following:
 
+```javascript
     function onSubmit() 
     {
      // get contract end date
@@ -32,7 +33,7 @@ All of the code is organized into folders. The commands and instructions will lo
 		  return false;
 	   }
      }
-
+```
 
 ## Related products:
 * [Mastering ServiceNow - Second Edition](https://www.packtpub.com/virtualization-and-cloud/mastering-servicenow-second-edition?utm_source=github&utm_medium=repository&utm_content=9781786465955)
